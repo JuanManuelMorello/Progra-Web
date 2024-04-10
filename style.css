@@ -1,12 +1,215 @@
+
 body{
-    background-color: aquamarine;
+    background-color: #cacaca;
 }
+
+.fixed-button {
+  position: fixed;
+  bottom: 2vw; /* Distancia desde la parte inferior de la ventana del navegador */
+  left: 2vw; /* Distancia desde el lado izquierdo de la ventana del navegador */
+}
+
+.fixed-button button {
+  padding: 1vw 2vw; /* Ajusta el padding según sea necesario */
+  background-color: #ff0000; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none;
+  border-radius: 5vw;
+  cursor: pointer;
+}
+
+.fixed-button button:hover {
+  background-color: #0056b3; /* Color de fondo del botón al pasar el ratón por encima */
+}
+
+.dolarbutton{
+  text-decoration: none;
+  color: #000;
+  font-family: sans-serif;
+}
+.container-fluid{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #177E89;
+  text-align: center;
+}
+#Bienvenido{
+  font-family: Sans-serif;
+  padding-top: 5vw;
+  text-align: center;
+  margin-bottom: 2vw;
+}
+
+.principal {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 2vw 0vw;
+  grid-auto-flow: row;
+  margin: 1vw 1vw;
+  margin-bottom: 0%;
+  margin-bottom: 0.1vw;
+  grid-template-areas:
+    "Main"
+    "Footer";
+  
+}
+
+.Titulo1 a, .Titulo2 a, .Titulo3 a {
+  font-family: Sans-serif;
+  
+
+  text-decoration: none;
+  color: #000;
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 4vw;
+}
+.Titulo1, .Titulo2, .Titulo3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Titulo1 a, .Titulo2 a, .Titulo3 a {
+  width: 100%; /* Ajusta el ancho del enlace para ocupar todo el espacio disponible */
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+}
+.Titulo3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Titulo3 a {
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  padding: 0;
+}
+
+.Titulo1, .Titulo2, .Titulo3 {
+  padding: 0; /* Elimina el relleno para que el botón ocupe todo el espacio */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 22vw; /* Ajusta la altura según sea necesario */
+  object-fit: cover; /* Esto asegura que la imagen se ajuste al contenedor manteniendo su relación de aspecto */
+}
+.Foto2 img, .Foto3 img {
+  width: 100%;
+  height: 22vw; /* Mismo tamaño que las imágenes del carrusel */
+  object-fit: cover; /* Ajuste de la imagen */
+}
+.Foto1, .Foto2, .Foto3{
+  border: 0.3vw solid #0056b3;
+}
+.Main {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1% 3%;
+  
+  grid-auto-flow: row;
+  margin: 0 auto;
+  grid-template-areas:
+    "Quien-soy Dolares Transferencias";
+  grid-area: Main;
+}
+
+.Quien-soy {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 1.6fr;
+  gap: 0px 0px;
+  margin: 0 7vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Titulo1"
+    "Foto1";
+  grid-area: Quien-soy;
+}
+
+.Titulo1 { grid-area: Titulo1; }
+
+.Foto1 { grid-area: Foto1; }
+
+.Dolares {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 1.6fr;
+  gap: 0px 0px;
+  margin: 0 7vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Titulo2"
+    "Foto2";
+  grid-area: Dolares;
+}
+
+.Titulo2 { grid-area: Titulo2; }
+
+.Foto2 { grid-area: Foto2; }
+
+.Transferencias {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 1.6fr;
+  margin: 0 7vw;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Titulo3"
+    "Foto3";
+  grid-area: Transferencias;
+}
+
+.Titulo3 { grid-area: Titulo3; }
+
+.Foto3 { grid-area: Foto3; }
+.imagenota img {
+  max-width: 100%; 
+  height: auto; 
+  margin-top: -20vw;
+}
+
+.linea-horizontal {
+  border: none; /* Quita el borde predeterminado */
+  height: 0.5vw; /* Altura de la línea */
+  background-color: #000; /* Color de la línea */
+  margin: 2vw 0; /* Margen superior e inferior para separar la línea del contenido */
+}
+.Footer {  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Dejanosdatos redes";
+  grid-area: Footer;
+  margin-bottom: 8vw;
+}
+
+.Dejanosdatos { grid-area: Dejanosdatos; }
+
+.redes { grid-area: redes; }
+
 h1{
-    background-color: rgb(214, 10, 10);
     color: antiquewhite;
-    font-size: 30px;
+    font-size: 35px;
+  }
+p{
+  font-size: 1vw;
 }
-#Biondi{
+.logo{
+  width: 5vw;
+}
+
+  
+  
+  
+
+#juan{
     font-size: 20px;
     color: rgb(255, 0, 119);
 }
