@@ -88,25 +88,34 @@ body{
   text-decoration: none;
   color: #000;
   text-align: center;
-  padding: 0;
+  padding: 0.5vw;
 }
 
 .Titulo1, .Titulo2, .Titulo3 {
   padding: 0; /* Elimina el relleno para que el botón ocupe todo el espacio */
 }
-
+.navbar {
+  position: fixed; /* Asegura que la barra de navegación permanezca fija en la parte superior */
+  z-index: 1000; /* Establece un valor de z-index alto para la barra de navegación */
+}
 .carousel-item img {
   width: 100%;
   height: 22vw; /* Ajusta la altura según sea necesario */
   object-fit: cover; /* Esto asegura que la imagen se ajuste al contenedor manteniendo su relación de aspecto */
+  position: relative;
 }
-.Foto2 img, .Foto3 img {
+.Foto1 img, .Foto2 img, .Foto3 img {
   width: 100%;
   height: 22vw; /* Mismo tamaño que las imágenes del carrusel */
   object-fit: cover; /* Ajuste de la imagen */
+  
 }
+
 .Foto1, .Foto2, .Foto3{
   border: 0.3vw solid #0056b3;
+  width: 100%; /* Ajustar el ancho del contenedor */
+  height: 22vw; /* Ajustar la altura del contenedor */
+  overflow: hidden;
 }
 .Main {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -194,22 +203,170 @@ body{
 
 .redes { grid-area: redes; }
 
-h1{
-    color: antiquewhite;
-    font-size: 35px;
-  }
+
+.redes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.redes ul {
+  margin: 0;
+  padding: 0;
+}
+
+.whatsapp{
+  width: 6vw;
+  margin-bottom: 1.2vw;
+  margin-top: 0.5vw;
+  margin-right: 1.7vw;
+}
+.Linkedin{
+  width: 3.5vw;
+  margin-bottom: 1.2vw;
+  margin-right: 2vw;
+}
+.Instagram{
+  width: 3.5vw;
+  margin-bottom: 1.2vw;
+  margin-right: 2.3vw;
+}
+.red {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 p{
   font-size: 1vw;
 }
 .logo{
   width: 5vw;
 }
+@media (max-width: 359px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+  
+  .navbar-toggler {
+    order: -1;
+  }
+  
+  .navbar-collapse {
+    background-color: #177E89; /* Fondo de la barra de navegación */
+    padding: 10px;
+    border-top: 1px solid #fff; /* Línea superior */
+  }
+  .logo{
+    width: 17vw;
+  }
+  
+  .Main {
+    display: flex; /* Cambiamos a un contenedor flex */
+    flex-direction: column; /* Apilamos los elementos uno encima del otro */
+    align-items: center; /* Centramos los elementos horizontalmente */
+    gap: 20px; /* Espaciado entre los elementos */
+    padding-top: 3vw;
+  }
+  .Foto1, .Foto2, .Foto3 {
+    width: 100%; /* Ajustamos el ancho de los divs que contienen las imágenes */
+    margin-top: 2.2vw;
+  }
 
+  .Foto1 img, .Foto2 img, .Foto3 img {
+    width: auto; /* Establece el ancho de la imagen a automático */
+    height: 100%; /* Establece la altura de la imagen al 100% del contenedor */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+  }
+  .Foto1, .Foto2, .Foto3 {
+    width: 100%; /* Mantenemos el ancho al 100% */
+    height: 78vw; /* Ajustamos la altura según sea necesario */
+    overflow: hidden; /* Ocultamos el contenido que exceda el tamaño del div */
+  }
+  .Quien-soy, .Dolares, .Transferencias {
+    width: 80%;
+    margin-bottom: none; /* Agregamos margen inferior */
+  }
   
+  .principal {
+    margin-bottom: 0; /* Elimina el margen inferior */
+  }
+  .principal {
+    padding-bottom: 0; /* Elimina el relleno inferior */
+  }
+  .Footer {
+    display: flex;
+    flex-direction: column; /* Apila los elementos uno encima del otro */
+  }
   
+  .Dejanosdatos {
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+  .imagenota{
+    margin-top: 0vw;
+  }
+  .red{
+    width: 100%;
+  }
+  .whatsapp{
+    width: 13vw;
+    margin-bottom: 1.2vw;
+    margin-top: 1.5vw;
+    margin-right: 0.5vw;
+  }
+  .Linkedin{
+    width: 8vw;
+    margin-bottom: 1.2vw;
+    margin-right: 1.5vw;
+  }
+  .Instagram{
+    width: 8vw;
+    margin-bottom: 1.2vw;
+    margin-right: 2vw;
+  }
+  .redes {
+    display: flex; /* Cambia a flexbox */
+    flex-direction: row; /* Los elementos estarán en línea horizontal */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .redes ul li {
+    margin-right: 2vw; /* Añade un espacio entre los elementos */
+  }
   
+  .Footer .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-#juan{
-    font-size: 20px;
-    color: rgb(255, 0, 119);
+  .Footer .redes ul {
+    margin: 0;
+    padding: 0;
+  }
+  .redes ul li img {
+    width: 5vw; /* Ajusta el tamaño de las imágenes */
+  }
+  #Bienvenido {
+    margin-top: 15vw;
+    top: 0; /* Colocamos el título en la parte superior */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Centramos horizontalmente */
+    background-color: #fff; /* Fondo blanco para legibilidad */
+    padding: 3vw 0; /* Espaciado interno */
+    box-sizing: border-box; /* Incluimos el padding en el ancho total */
+    
+  }
 }
+
+
+
+  
+
+
