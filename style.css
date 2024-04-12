@@ -43,7 +43,7 @@ body{
 
 .principal {  display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-auto-columns: 1fr;
   gap: 2vw 0vw;
   grid-auto-flow: row;
@@ -51,8 +51,7 @@ body{
   margin-bottom: 0%;
   margin-bottom: 0.1vw;
   grid-template-areas:
-    "Main"
-    "Footer";
+    "Main";
   
 }
 
@@ -179,9 +178,11 @@ body{
 .imagenota img {
   max-width: 100%; 
   height: auto; 
-  margin-top: -20vw;
+  margin-top: 4vw;
 }
-
+.linea-horizontal1{
+  margin-top: 2vw;
+}
 .linea-horizontal {
   border: none; /* Quita el borde predeterminado */
   height: 0.5vw; /* Altura de la línea */
@@ -307,7 +308,7 @@ p{
     width: 100%; /* Ocupa todo el ancho disponible */
   }
   .imagenota{
-    margin-top: 0vw;
+    margin-top: -2vw;
   }
   .red{
     width: 100%;
