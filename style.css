@@ -2,24 +2,27 @@
 body{
     background-color: #cacaca;
 }
-
+.navbar {
+  position: fixed; /* me fija la navbar */
+  z-index: 1000; /* le doy prioridad a la navbar*/
+}
 .fixed-button {
   position: fixed;
-  bottom: 2vw; /* Distancia desde la parte inferior de la ventana del navegador */
-  left: 2vw; /* Distancia desde el lado izquierdo de la ventana del navegador */
+  bottom: 2vw; 
+  left: 2vw; 
 }
 
 .fixed-button button {
-  padding: 1vw 2vw; /* Ajusta el padding según sea necesario */
-  background-color: #ff0000; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
+  padding: 1vw 2vw; 
+  background-color: #ff0000; /* color del botonsuli */
+  color: #fff; 
   border: none;
   border-radius: 5vw;
   cursor: pointer;
 }
 
 .fixed-button button:hover {
-  background-color: #0056b3; /* Color de fondo del botón al pasar el ratón por encima */
+  background-color: #0056b3; /* Color cuando me paro en el boton */
 }
 
 .dolarbutton{
@@ -57,63 +60,36 @@ body{
 
 .Titulo1 a, .Titulo2 a, .Titulo3 a {
   font-family: Sans-serif;
-  
-
   text-decoration: none;
   color: #000;
-  text-align: center; /* Centra el texto horizontalmente */
-  padding: 4vw;
+  text-align: center; 
+  padding: 2vw;
+  width: 100%; 
 }
 .Titulo1, .Titulo2, .Titulo3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1vw;
+  padding: 1vw; 
 }
 
-.Titulo1 a, .Titulo2 a, .Titulo3 a {
-  width: 100%; /* Ajusta el ancho del enlace para ocupar todo el espacio disponible */
-  text-decoration: none;
-  color: #000;
-  text-align: center;
-}
-.Titulo3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Titulo3 a {
-  width: 100%;
-  text-decoration: none;
-  color: #000;
-  text-align: center;
-  padding: 0.5vw;
-}
-
-.Titulo1, .Titulo2, .Titulo3 {
-  padding: 0; /* Elimina el relleno para que el botón ocupe todo el espacio */
-}
-.navbar {
-  position: fixed; /* Asegura que la barra de navegación permanezca fija en la parte superior */
-  z-index: 1000; /* Establece un valor de z-index alto para la barra de navegación */
-}
 .carousel-item img {
   width: 100%;
-  height: 22vw; /* Ajusta la altura según sea necesario */
-  object-fit: cover; /* Esto asegura que la imagen se ajuste al contenedor manteniendo su relación de aspecto */
+  height: 22vw; 
+  object-fit: cover; /*ajusta los bordes de la foto*/
   position: relative;
 }
-.Foto1 img, .Foto2 img, .Foto3 img {
+.Foto1 img, .Foto2 img, .Foto3 img { /* este tambien acomoda los tamaños de las fotos */
   width: 100%;
-  height: 22vw; /* Mismo tamaño que las imágenes del carrusel */
-  object-fit: cover; /* Ajuste de la imagen */
+  height: 22vw; 
+  object-fit: cover; 
   
 }
-
 .Foto1, .Foto2, .Foto3{
   border: 0.3vw solid #0056b3;
-  width: 100%; /* Ajustar el ancho del contenedor */
-  height: 22vw; /* Ajustar la altura del contenedor */
+  width: 100%; 
+  height: 22vw; 
   overflow: hidden;
 }
 .Main {  display: grid;
@@ -178,16 +154,19 @@ body{
 .imagenota img {
   max-width: 100%; 
   height: auto; 
-  margin-top: 4vw;
+  margin-top: 1vw;
 }
 .linea-horizontal1{
-  margin-top: 2vw;
+  border: none; 
+  height: 0.5vw; /* La altura de la linea divisora */
+  background-color: #000; 
+  margin: 2vw 0;
 }
-.linea-horizontal {
-  border: none; /* Quita el borde predeterminado */
-  height: 0.5vw; /* Altura de la línea */
-  background-color: #000; /* Color de la línea */
-  margin: 2vw 0; /* Margen superior e inferior para separar la línea del contenido */
+.linea-horizontal2 {
+  border: none; 
+  height: 0.5vw; 
+  background-color: #000; 
+  margin: 2vw 0; 
 }
 .Footer {  display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -258,54 +237,43 @@ p{
   }
   
   .navbar-collapse {
-    background-color: #177E89; /* Fondo de la barra de navegación */
+    background-color: #177E89; 
     padding: 10px;
-    border-top: 1px solid #fff; /* Línea superior */
+    border-top: 1px solid #fff; 
+    
   }
   .logo{
     width: 17vw;
   }
   
   .Main {
-    display: flex; /* Cambiamos a un contenedor flex */
-    flex-direction: column; /* Apilamos los elementos uno encima del otro */
-    align-items: center; /* Centramos los elementos horizontalmente */
-    gap: 20px; /* Espaciado entre los elementos */
+    display: flex; /* aca lo cambio a flex para poder trabajarlo */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
     padding-top: 3vw;
   }
   .Foto1, .Foto2, .Foto3 {
-    width: 100%; /* Ajustamos el ancho de los divs que contienen las imágenes */
+    width: 100%; 
     margin-top: 2.2vw;
+    height: 78vw; 
+    overflow: hidden; 
   }
 
   .Foto1 img, .Foto2 img, .Foto3 img {
-    width: auto; /* Establece el ancho de la imagen a automático */
-    height: 100%; /* Establece la altura de la imagen al 100% del contenedor */
-    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+    width: auto; 
+    height: 100%; 
+    object-fit: cover; 
   }
-  .Foto1, .Foto2, .Foto3 {
-    width: 100%; /* Mantenemos el ancho al 100% */
-    height: 78vw; /* Ajustamos la altura según sea necesario */
-    overflow: hidden; /* Ocultamos el contenido que exceda el tamaño del div */
-  }
-  .Quien-soy, .Dolares, .Transferencias {
-    width: 80%;
-    margin-bottom: none; /* Agregamos margen inferior */
-  }
-  
-  .principal {
-    margin-bottom: 0; /* Elimina el margen inferior */
-  }
-  .principal {
-    padding-bottom: 0; /* Elimina el relleno inferior */
-  }
+
+
   .Footer {
     display: flex;
-    flex-direction: column; /* Apila los elementos uno encima del otro */
+    flex-direction: column; 
   }
   
   .Dejanosdatos {
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%; /* si quiero que ocupe todo uso width */
   }
   .imagenota{
     margin-top: -2vw;
@@ -330,15 +298,15 @@ p{
     margin-right: 2vw;
   }
   .redes {
-    display: flex; /* Cambia a flexbox */
-    flex-direction: row; /* Los elementos estarán en línea horizontal */
+    display: flex; /* lo cambio a flex para manipularlo */
+    flex-direction: row; /*pongo uno al lado del otro*/
     justify-content: center; /* Centra los elementos horizontalmente */
     list-style: none;
     margin: 0;
     padding: 0;
   }
   .redes ul li {
-    margin-right: 2vw; /* Añade un espacio entre los elementos */
+    margin-right: 2vw; 
   }
   
   .Footer .redes {
@@ -352,16 +320,16 @@ p{
     padding: 0;
   }
   .redes ul li img {
-    width: 5vw; /* Ajusta el tamaño de las imágenes */
+    width: 5vw; 
   }
   #Bienvenido {
-    margin-top: 15vw;
-    top: 0; /* Colocamos el título en la parte superior */
-    width: 100%; /* Ancho completo */
-    text-align: center; /* Centramos horizontalmente */
-    background-color: #fff; /* Fondo blanco para legibilidad */
-    padding: 3vw 0; /* Espaciado interno */
-    box-sizing: border-box; /* Incluimos el padding en el ancho total */
+    margin-top: 15vw; /* No lo saques sino no se ve*/
+    top: 0; 
+    width: 100%; 
+    text-align: center; 
+    background-color: #fff; 
+    padding: 3vw 0; 
+    box-sizing: border-box;
     
   }
 }
