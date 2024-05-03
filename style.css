@@ -1,3 +1,6 @@
+html, body {
+  height: 100%;
+}
 
 body{
     background-color: #ffffff;
@@ -272,120 +275,109 @@ body {
   width: 100%;
 }
 /******************************************************************/
+
 @media (max-width: 767px) {
-  .navbar-nav {
-    flex-direction: column;
-    align-items: center;
+  .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
   }
-  
-  .navbar-nav .nav-item {
-    margin-bottom: 10px;
-  }
-  
-  .navbar-toggler {
-    order: -1;
-  }
-  
-  .navbar-collapse {
-    background-color: #177E89; 
-    padding: 10px;
-    border-top: 1px solid #fff; 
-    
-  }
-  .logo{
+  .logo {
     width: 17vw;
   }
-  
+  .carousel-item img {
+    width: 100%;
+    height: auto; 
+  }
   .Main {
-    display: flex; /* aca lo cambio a flex para poder trabajarlo */
-    flex-direction: column; 
-    align-items: center; 
-    gap: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding-top: 3vw;
   }
-  .Foto1, .Foto2, .Foto3 {
-    width: 100%; 
+  .Foto1,
+  .Foto2,
+  .Foto3 {
+    width: 100%;
     margin-top: 2.2vw;
-    height: 78vw; 
-    overflow: hidden; 
+    height: 78vw;
+    overflow: hidden;
+    max-width: 250px;
   }
-
-  .Foto1 img, .Foto2 img, .Foto3 img {
-    width: auto; 
-    height: 100%; 
-    object-fit: cover; 
+  .Foto1 img,
+  .Foto2 img,
+  .Foto3 img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
   }
-
-
   .Footer {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
-  
   .Dejanosdatos {
-    width: 100%; /* si quiero que ocupe todo uso width */
-  }
-  .imagenota{
-    margin-top: -2vw;
-  }
-  .red{
     width: 100%;
   }
-  .whatsapp{
+  .imagenota {
+    margin-top: -2vw;
+  }
+  .red {
+    width: 100%;
+  }
+  .whatsapp {
     width: 13vw;
     margin-bottom: 1.2vw;
     margin-top: 1.5vw;
     margin-right: 0.5vw;
   }
-  .Linkedin{
+  .Linkedin {
     width: 8vw;
     margin-bottom: 1.2vw;
     margin-right: 1.5vw;
   }
-  .Instagram{
+  .Instagram {
     width: 8vw;
     margin-bottom: 1.2vw;
     margin-right: 2vw;
   }
   .redes {
-    display: flex; /* lo cambio a flex para manipularlo */
-    flex-direction: row; /*pongo uno al lado del otro*/
-    justify-content: center; /* Centra los elementos horizontalmente */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
   }
   .redes ul li {
-    margin-right: 2vw; 
+    margin-right: 2vw;
   }
-  
   .Footer .redes {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
   .Footer .redes ul {
     margin: 0;
     padding: 0;
   }
   .redes ul li img {
-    width: 5vw; 
+    width: 5vw;
   }
   #Bienvenido {
-    margin-top: 15vw; /* No lo saques sino no se ve*/
-    top: 0; 
-    width: 100%; 
-    text-align: center; 
-    background-color: #fff; 
-    padding: 3vw 0; 
+    margin-top: 15vw;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 3vw 0;
     box-sizing: border-box;
-    
   }
-  .table {
-    font-size: 12px; /* Reducir el tamaño de la fuente para dispositivos más pequeños */
+  .btn-block {
+    width: 100%;
   }
 }
+
 
 
 
