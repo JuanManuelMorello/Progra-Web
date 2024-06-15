@@ -119,7 +119,9 @@ body{
     "Foto1";
   grid-area: Quien-soy;
 }
-
+.carousel-inner, .carousel-item {
+  height: 22vw; /* Asegura que el contenedor del carrusel tenga la misma altura */
+}
 .Titulo1 { grid-area: Titulo1; }
 
 .Foto1 { grid-area: Foto1; }
@@ -282,13 +284,49 @@ body {
     width: 100%;
     z-index: 1000;
   }
+
   .logo {
     width: 17vw;
   }
+
+  .carousel-item {
+    width: 100%;
+    height: 100%;
+  }
+
   .carousel-item img {
     width: 100%;
-    height: auto; 
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
   }
+
+  .Foto1, .Foto2, .Foto3 {
+    width: 250px;
+    margin-top: 2.2vw;
+    height: 72vw; /* Ajustamos la altura para que sea igual que en las otras cards */
+    overflow: hidden;
+
+  }
+
+  
+  .Foto1 img, .Foto2 img, .Foto3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Ajuste para todas las imágenes del carrusel */
+  .Foto1 .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .Foto1 .carousel-inner, .Foto2 .carousel-inner, .Foto3 .carousel-inner {
+    height: 100%; /*  la altura del carrusel es el 100% de la card */
+    width: 112.5%;
+  }
+
   .Main {
     display: flex;
     flex-direction: column;
@@ -296,51 +334,43 @@ body {
     gap: 20px;
     padding-top: 3vw;
   }
-  .Foto1,
-  .Foto2,
-  .Foto3 {
-    width: 100%;
-    margin-top: 2.2vw;
-    height: 78vw;
-    overflow: hidden;
-    max-width: 250px;
-  }
-  .Foto1 img,
-  .Foto2 img,
-  .Foto3 img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-  }
+
   .Footer {
     display: flex;
     flex-direction: column;
   }
+
   .Dejanosdatos {
     width: 100%;
   }
+
   .imagenota {
     margin-top: -2vw;
   }
+
   .red {
     width: 100%;
   }
+
   .whatsapp {
     width: 13vw;
     margin-bottom: 1.2vw;
     margin-top: 1.5vw;
     margin-right: 0.5vw;
   }
+
   .Linkedin {
     width: 8vw;
     margin-bottom: 1.2vw;
     margin-right: 1.5vw;
   }
+
   .Instagram {
     width: 8vw;
     margin-bottom: 1.2vw;
     margin-right: 2vw;
   }
+
   .redes {
     display: flex;
     flex-direction: row;
@@ -349,21 +379,26 @@ body {
     margin: 0;
     padding: 0;
   }
+
   .redes ul li {
     margin-right: 2vw;
   }
+
   .Footer .redes {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .Footer .redes ul {
     margin: 0;
     padding: 0;
   }
+
   .redes ul li img {
     width: 5vw;
   }
+
   #Bienvenido {
     margin-top: 15vw;
     top: 0;
@@ -377,10 +412,3 @@ body {
     width: 100%;
   }
 }
-
-
-
-
-  
-
-
