@@ -18,7 +18,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" href="./index.html">Inicio</a>
+                        <a class="nav-link" href="./index.html">Inicio</a>
                         <a class="nav-link" href="compra.html">Compra</a>
                         <a class="nav-link" href="https://wa.link/wks8wn">Contacto</a>
                         <a class="nav-link" href="https://www.santander.com.ar/select">Transferencias</a>
@@ -99,19 +99,20 @@
                 </tr>
             </tbody>
         </table>
-        <div class="d-flex justify-content-end">
-            <h3>Total general: 
-                <span id="grandTotal">0.00</span></h3>
+        <div class="d-flex justify-content-end" id="compra">
+            <h3>Total general: <span id="grandTotal">0.00</span></h3>
+            <div id="div-boton" class="d-flex">
+                <button id="btnComprar" class="btn btn-primary btn-sm me-2">Comprar</button>
+                <button id="btnVaciarCarrito" class="btn btn-danger btn-sm me-2">Vaciar</button>
+                <button id="btnResumenCompra" class="btn btn-primary btn-sm" onclick="generarResumenCompra()">Resumen</button>
             </div>
-            <div class="d-flex justify-content-between mt-4">
-                
-                <button id="btnComprar" class="btn btn-primary">Comprar</button>
-
-            </div>
-        </main>
-        <footer class="mt-auto py-3 bg-dark text-white text-center">
-            <p>© 2024 Avance Financiero. Todos los derechos reservados.</p>
-        </footer>
+        </div>
+        
+            <div id="resumenCompra"></div>
+    </main>
+    <footer class="mt-auto py-3 bg-dark text-white text-center">
+        <p>© 2024 Avance Financiero. Todos los derechos reservados.</p>
+    </footer>
     
         <script src="script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

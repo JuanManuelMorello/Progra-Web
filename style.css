@@ -10,6 +10,7 @@ body{
   z-index: 1000; /* le doy prioridad a la navbar*/
   top: 0;
 }
+
 .fixed-button {
   position: fixed;
   bottom: 2vw; 
@@ -191,6 +192,11 @@ body{
 
 .redes { grid-area: redes; }
 
+#compra{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
 
 .redes {
   list-style: none;
@@ -241,17 +247,7 @@ body {
   margin-bottom: 2vw;
   margin-top: 2vw;
 }
-.navbar {
-  background-color: #007bff; /* Azul */
-}
 
-.navbar-light .navbar-nav .nav-link {
-  color: white;
-}
-
-.navbar-light .navbar-brand {
-  color: white;
-}
 
 .table {
   margin-top: 3vw;
@@ -270,12 +266,18 @@ body {
 .btn-primary {
   background-color: #007bff; /* Azul */
 }
-
+#form{
+  padding-bottom: 30px;
+}
 .footer {
   background-color: #333; /* Gris oscuro */
   color: white;
   width: 100%;
 }
+.navbar-nav .nav-link {
+  color: #fceaea; /* Blanco */
+}
+
 /******************************************************************/
 
 @media (max-width: 767px) {
